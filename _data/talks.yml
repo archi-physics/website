@@ -1,0 +1,32 @@
+- title: "Artificial Intelligence for Operations at CMS"
+  speaker: "Pietro Lugato"
+  institution: "MIT"
+  date: 2026-05-26
+  event: "CHEP 2026"
+  event_url: "https://indico.cern.ch/event/1471803/contributions/6967119/"
+
+- title: "Agents for Scientific Computing"
+  speaker: "Jason Mohoney"
+  institution: "MIT"
+  date: 2026-03-17
+  event: "CERN EP-IT Data Science Seminar"
+  event_url: "https://indico.cern.ch/event/1659399/"
+  slides_url: "https://indico.cern.ch/event/1659399/attachments/3241100/5781202/Agents%20for%20Scientific%20Computing-7.pdf"
+  recording_url: "https://videos.cern.ch/record/3023647"
+
+- title: "Bridging LLMs and Scientific Infrastructure"
+  speaker: "Mariarosaria D'Alfonso"
+  institution: "MIT"
+  date: 2025-06-03
+  event: "CMS ML Workshop — Bites of FM4S"
+  event_url: "https://indico.cern.ch/event/1543967/contributions/6534763/"
+  slides_url: "https://indico.cern.ch/event/1543967/contributions/6534763/attachments/3079703/5451253/dalfonso_LLM_workshop_june3.pdf"
+
+- title: "Archi and AI Agents in Scientific Computing"
+  speaker: "Luca Lavezzo"
+  institution: "MIT"
+  date: 2026-02-05
+  event: "LPC Physics Forum, Fermilab"
+  event_url: "https://indico.cern.ch/event/1645185/"
+  slides_url: "https://indico.cern.ch/event/1645185/contributions/6916536/attachments/3214843/5726920/Archi_fermilab_feb_26.pdf"
+  recording_url: "https://indico.cern.ch/event/1645185/contributions/6916536/attachments/3214843/5727019/video1412951645.mp4"

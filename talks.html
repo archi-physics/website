@@ -1,0 +1,42 @@
+---
+layout: default
+title: Talks & Publications
+permalink: /talks/
+---
+
+<h1 class="page-title">Talks & Publications</h1>
+
+<h2 class="section-heading">Talks</h2>
+
+<ul class="talks-list">
+  {% assign sorted_talks = site.data.talks | sort: "date" | reverse %}
+  {% for talk in sorted_talks %}
+  <li>
+    <div class="talk-date">{% assign today = 'now' | date: "%Y-%m-%d" %}{% assign talk_date_str = talk.date | date: "%Y-%m-%d" %}{% if talk_date_str > today %}<span class="talk-upcoming">Upcoming</span> {% endif %}{{ talk.date | date: "%b %-d, %Y" }} · {{ talk.event }}</div>
+    <div class="talk-title">{{ talk.title }}</div>
+    <div class="talk-speaker">{{ talk.speaker }} ({{ talk.institution }})</div>
+    <div class="talk-links">
+      {% if talk.slides_url %}<a href="{{ talk.slides_url }}" target="_blank" rel="noopener">Slides</a>{% endif %}
+      {% if talk.recording_url %}<a href="{{ talk.recording_url }}" target="_blank" rel="noopener">Recording</a>{% endif %}
+      {% if talk.event_url %}<a href="{{ talk.event_url }}" target="_blank" rel="noopener">Event Page</a>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+
+<h2 class="section-heading">Publications</h2>
+
+<ul class="pub-list">
+  {% for pub in site.data.publications %}
+  <li>
+    <div class="pub-title">{% if pub.upcoming %}<span class="talk-upcoming">Upcoming</span> {% endif %}{{ pub.title }}</div>
+    <div class="pub-authors">{{ pub.authors }}</div>
+    <div class="pub-venue">{{ pub.venue }}{% if pub.year %}, {{ pub.year }}{% endif %}</div>
+    <div class="talk-links">
+      {% if pub.arxiv_url %}<a href="{{ pub.arxiv_url }}" target="_blank" rel="noopener">arXiv</a>{% endif %}
+      {% if pub.doi_url %}<a href="{{ pub.doi_url }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+      {% if pub.event_url %}<a href="{{ pub.event_url }}" target="_blank" rel="noopener">Event Page</a>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>

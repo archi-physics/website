@@ -1,0 +1,23 @@
+title: Archi
+description: "An open-source AI agent for CMS computing operations at CERN, built at MIT."
+url: "" # Set to your custom domain when ready, e.g. https://archi-physics.org
+baseurl: "" # Set to /archi-website if hosting at archi-physics.github.io/archi-website/
+
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+permalink: /news/:year/:month/:day/:title/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - openspec
+  - AGENTS.md
+  - vendor
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

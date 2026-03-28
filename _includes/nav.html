@@ -1,0 +1,21 @@
+<header class="site-nav">
+  <div class="nav-container">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">
+      <img src="{{ '/assets/images/archi_no_text.png' | relative_url }}" alt="Archi" width="24" height="24">
+      <span>Archi</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="nav-links">
+      <a href="{{ '/news/' | relative_url }}" {% if page.url == '/news/' or page.layout == 'post' %}class="active"{% endif %}>News</a>
+      <a href="{{ '/talks/' | relative_url }}" {% if page.url == '/talks/' %}class="active"{% endif %}>Talks & Pubs</a>
+      <a href="{{ '/team/' | relative_url }}" {% if page.url == '/team/' %}class="active"{% endif %}>Team</a>
+      <a href="https://archi-physics.github.io/archi/" target="_blank" rel="noopener">Docs&nbsp;↗</a>
+      <a href="https://github.com/archi-physics/archi" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
+    </nav>
+  </div>
+</header>

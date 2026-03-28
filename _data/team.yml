@@ -1,0 +1,71 @@
+- name: Christoph Paus
+  role: Professor of Physics
+  institution: MIT Physics
+  pi: true
+  github: cpausmit
+  photo: cpausmit.jpg
+- name: Tim Kraska
+  role: Professor of EECS
+  institution: MIT CSAIL
+  pi: true
+- name: Mariarosaria D'Alfonso
+  role: Research Scientist
+  institution: MIT Physics
+  github: mariadalfonso
+  photo: mariadalfonso.jpg
+- name: Luca Lavezzo
+  institution: MIT Physics
+  github: lucalavezzo
+  photo: lucalavezzo.jpg
+- name: Pietro Lugato
+  institution: MIT Physics
+  github: pmlugato
+  photo: pmlugato.jpg
+- name: Dmytro Kovalskyi
+  role: Research Scientist
+  institution: MIT Physics
+- name: Warren Nam
+  institution: MIT Physics
+- name: Zhangqier Wang
+  institution: MIT Physics
+  github: z4027163
+  photo: z4027163.jpg
+- name: Jason Mohoney
+  role: Postdoctoral Associate
+  institution: MIT CSAIL
+  github: JasonMoho
+  photo: JasonMoho.jpg
+- name: Matthew Russo
+  institution: MIT CSAIL
+- name: Jack Tucker
+  institution: MIT CSAIL
+- name: Muhammad Hassan Ahmed
+  institution: CERN
+  github: hassan11196
+  photo: hassan11196.jpg
+- name: Hasan Ozturk
+  institution: CERN
+  github: haozturk
+  photo: haozturk.jpg
+- name: Viphava Ohm
+  institution: CERN
+  github: Viphava280444
+  photo: Viphava280444.jpg
+- name: Juan Pablo Salas Galindo
+  institution: Fermilab
+  github: juanpablosalas
+  photo: juanpablosalas.jpg
+- name: Aron Soha
+  institution: Fermilab
+- name: Samantha Sunnarborg
+  institution: Collaborators
+  affiliation: Brown
+- name: Gabriele Benelli
+  institution: Collaborators
+  affiliation: Brown
+- name: Austin Swinney
+  institution: Collaborators
+  affiliation: Harvard
+- name: Krittin Phornsiricharoenphant
+  institution: Collaborators
+  affiliation: Chulalongkorn

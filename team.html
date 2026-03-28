@@ -1,0 +1,57 @@
+---
+layout: default
+title: Team
+permalink: /team/
+---
+
+<h1 class="page-title">Team</h1>
+
+<p class="page-intro">A collaboration between physicists and computer scientists at MIT, CERN, Fermilab, Brown, Harvard, and Chulalongkorn University.</p>
+
+<section class="team-group team-pis">
+  <h2>Principal Investigators</h2>
+  <div class="pi-list">
+    {% assign pis = site.data.team | where: "pi", true %}
+    {% for member in pis %}
+    <div class="pi-card">
+      {% if member.photo %}
+      <img src="{{ '/assets/images/team/' | append: member.photo | relative_url }}" alt="{{ member.name }}" class="pi-photo">
+      {% else %}
+      <div class="pi-photo pi-photo--placeholder">{{ member.name | split: ' ' | first | slice: 0 }}{{ member.name | split: ' ' | last | slice: 0 }}</div>
+      {% endif %}
+      <div>
+        <strong>{{ member.name }}</strong>
+        {% if member.role %}<span class="member-role">{{ member.role }}</span>{% endif %}
+        <span class="member-inst">{{ member.institution }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% assign non_pis = site.data.team | where: "pi", false %}
+{% assign no_pi = site.data.team | where_exp: "m", "m.pi == nil" %}
+{% assign members = non_pis | concat: no_pi %}
+{% assign institutions = members | map: "institution" | uniq %}
+{% for inst in institutions %}
+<section class="team-group">
+  <h2>{{ inst }}</h2>
+  <div class="team-list">
+    {% assign inst_members = members | where: "institution", inst %}
+    {% for member in inst_members %}
+    <div class="member">
+      {% if member.photo %}
+      <img src="{{ '/assets/images/team/' | append: member.photo | relative_url }}" alt="{{ member.name }}" class="member-photo">
+      {% else %}
+      <div class="member-photo member-photo--placeholder">{{ member.name | split: ' ' | first | slice: 0 }}{{ member.name | split: ' ' | last | slice: 0 }}</div>
+      {% endif %}
+      <div>
+        {% if member.github %}<a href="https://github.com/{{ member.github }}" target="_blank" rel="noopener"><strong>{{ member.name }}</strong></a>{% else %}<strong>{{ member.name }}</strong>{% endif %}
+        {% if member.role %}<span class="member-role">{{ member.role }}</span>{% endif %}
+        {% if member.affiliation %}<span class="member-role">{{ member.affiliation }}</span>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

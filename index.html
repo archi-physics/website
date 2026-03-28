@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div class="hero-band">
+<div class="hero">
+  <div class="hero-inner">
+    <img src="{{ '/assets/images/archi_no_text.png' | relative_url }}" alt="Archi logo" class="hero-logo">
+    <div>
+      <h1>Archi</h1>
+      <p class="hero-sub">AI agent for CMS computing operations at CERN</p>
+    </div>
+  </div>
+  <p class="hero-desc">Operational knowledge at <a href="https://cms.cern" target="_blank" rel="noopener">CMS</a> is scattered across wikis, JIRA, Redmine, and runbooks. Archi pulls it together — an open-source agent built at MIT that answers operator questions with cited sources and verifiable context.</p>
+  <nav class="hero-nav">
+    <a href="https://archi-physics.github.io/archi/" target="_blank" rel="noopener">Documentation</a>
+    <a href="https://github.com/archi-physics/archi" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://archi-physics.github.io/archi/quickstart/" target="_blank" rel="noopener">Quickstart</a>
+  </nav>
+</div>
+</div>
+
+<div class="cols">
+  <section>
+    <h2>Deployed at CMS</h2>
+    <p>The <a href="https://cms.cern" target="_blank" rel="noopener">CMS experiment</a> operates one of the largest distributed computing infrastructures in science — thousands of physicists, hundreds of sites, millions of jobs per day. Archi is deployed as a prototype assistant for <a href="https://cms-computing.web.cern.ch" target="_blank" rel="noopener">Computing Operations</a>, answering operator questions grounded in internal documentation, JIRA tickets, and operational runbooks.</p>
+    <p>Additional instances serve <a href="https://submit.mit.edu" target="_blank" rel="noopener">SubMIT</a> at MIT, Data Quality Monitoring shifters, and heavy-ion analysis at <a href="https://www.fnal.gov" target="_blank" rel="noopener">Fermilab</a>.</p>
+  </section>
+
+  <section>
+    <h2>Architecture</h2>
+    <p>Archi ingests documentation, tickets, code, and web pages into a vector store, then uses a <a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener">ReAct</a>-style agent loop to retrieve relevant context and answer questions with cited sources. Tools let the agent search, fetch full documents, and query live APIs.</p>
+    <p>The system is model-agnostic (OpenAI, Anthropic, Gemini, or local models via Ollama) and ships as a single Docker deployment managed by a CLI. Interfaces include a chat app, Mattermost bot, email responder, and Grafana dashboard.</p>
+  </section>
+</div>
+
+<div class="demo-section">
+  <h2>Chat interface</h2>
+  <img src="{{ '/assets/images/demo-condor.png' | relative_url }}" alt="Archi agent querying Condor metrics to diagnose a production job issue at CERN" class="demo-img">
+</div>
+
+<section class="news-section">
+  <h2>News</h2>
+  {% for post in site.posts limit:3 %}
+  <div class="news-row">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </div>
+  {% endfor %}
+  <p class="news-more"><a href="{{ '/news/' | relative_url }}">All news &rarr;</a></p>
+</section>
+
+<hr class="section-rule">
+
+<footer class="home-credit">
+  Developed by <a href="https://web.mit.edu/physics/people/faculty/paus_christoph.html" target="_blank" rel="noopener">Prof.&nbsp;Paus</a> (MIT&nbsp;Physics) and <a href="https://people.csail.mit.edu/kraska/" target="_blank" rel="noopener">Prof.&nbsp;Kraska</a> (MIT&nbsp;CSAIL) with collaborators at CERN, Fermilab, Brown, Harvard, and Chulalongkorn. Funded by the MIT Generative AI Impact Consortium.
+</footer>
