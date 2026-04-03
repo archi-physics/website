@@ -8,7 +8,7 @@ image: /assets/images/news/hackathon-group.jpg
 
 The recent [Large Language Model Hackathon](https://indico.cern.ch/event/1623577) at the LHC Physics Center (LPC) at Fermilab brought together physicists and computer scientists from across the CMS experiment to hack away at building agents for use in the Collaboration.
 
-![Team at Fermilab](/assets/images/news/hackathon-group.jpg)
+![Team at Fermilab]({{ site.baseurl }}/assets/images/news/hackathon-group.jpg)
 
 Ideas are abundant as AI-enabled agents promise to affect all branches of high-energy physics: from accelerating experimental design, to automating experiments, to running agentic workflows for analyses. The challenge ahead is to master these emerging tools, and integrating them in our workflows, while maintaining the high level of rigor we already demand of our work.
 
@@ -27,7 +27,7 @@ The Computing Operations deployment is already in a prototype-mode for operators
 
 Many ideas came together as hackers discussed current issues and wish-lists. Many new features were developed over the week, including: a new document-uploader, a database UI, live-data tools for Rucio, roles for users, sandboxed code execution, and a more robust CI with benchmarking against previous releases.
 
-![Hackers at Fermilab facilities](/assets/images/news/hackathon-collage.png)
+![Hackers at Fermilab facilities]({{ site.baseurl }}/assets/images/news/hackathon-collage.png)
 
 The hacking was set to the backdrop of the beautiful Wilson Hall at Fermilab, where we were kindly hosted by the LPC. The hackathon can be concluded a success, as the team met each other in person for the first time, much work was done during the week, and we laid the work ahead for the next couple of months.
 
