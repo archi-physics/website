@@ -1,0 +1,55 @@
+# Definitive author list for "Archi: Agentic Operations at the CMS Experiment"
+# (arXiv:2606.04755). Single source of truth for the rendered list and the
+# LaTeX export on the Talks & Publications page.
+affiliations:
+  - id: 1
+    name: "Massachusetts Institute of Technology, Cambridge, MA, USA"
+  - id: 2
+    name: "CMS Collaboration, CERN, Geneva, Switzerland"
+  - id: 3
+    name: "University of Wisconsin-Madison, Madison, WI, USA"
+  - id: 4
+    name: "Fermi National Accelerator Laboratory, Batavia, IL, USA"
+  - id: 5
+    name: "Brown University, Providence, RI, USA"
+  - id: 6
+    name: "Harvard University, Cambridge, MA, USA"
+list:
+  - name: "Pietro Lugato"
+    affil: "1,2"
+  - name: "Luca Lavezzo"
+    affil: "1,2"
+  - name: "Jason Mohoney"
+    affil: "1"
+  - name: "Hasan Ozturk"
+    affil: "2"
+  - name: "Muhammad Hassan Ahmed"
+    affil: "2"
+  - name: "Juan Pablo Salas"
+    affil: "2,3"
+  - name: "Viphava Ohm"
+    affil: "2,3"
+  - name: "Krittin Phornsiricharoenphant"
+    affil: "2"
+  - name: "Gabriele Benelli"
+    affil: "2,4,5"
+  - name: "Mariarosaria D'Alfonso"
+    affil: "1,2"
+  - name: "Manasvita Joshi"
+    affil: "6"
+  - name: "Warren Nam"
+    affil: "1"
+  - name: "Aron Soha"
+    affil: "2,4"
+  - name: "Samantha Sunnarborg"
+    affil: "2,5"
+  - name: "Austin Swinney"
+    affil: "6"
+  - name: "Jack Tucker"
+    affil: "1"
+  - name: "Dmytro Kovalskyi"
+    affil: "1,2"
+  - name: "Tim Kraska"
+    affil: "1"
+  - name: "Christoph Paus"
+    affil: "1,2"
