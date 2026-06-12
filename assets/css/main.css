@@ -300,6 +300,35 @@ h2.section-heading:not(:first-of-type) { margin-top: 2.5rem; }
 .pub-authors { font-size: 0.9rem; color: var(--fg2); margin-bottom: 0.1em; }
 .pub-venue { font-size: 0.82rem; color: var(--fg3); margin-bottom: 0.35em; }
 
+/* ===== Author list ===== */
+.author-block { margin-top: 0.25rem; }
+.author-names {
+  font-size: 0.95rem; color: var(--fg2); line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.author-names sup { font-size: 0.7em; color: var(--fg3); padding-left: 0.1em; }
+.author-affils {
+  list-style: decimal; font-size: 0.82rem; color: var(--fg3);
+  margin: 0 0 1.25rem; padding-left: 1.5rem;
+}
+.author-affils li { margin-bottom: 0.15em; padding-left: 0.25rem; }
+.author-export {
+  display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;
+}
+.copy-latex-btn {
+  font-family: var(--sans); font-size: 0.8rem; font-weight: 500;
+  color: var(--bg); background: var(--red);
+  border: none; border-radius: 6px; padding: 0.4em 0.9em; cursor: pointer;
+}
+.copy-latex-btn:hover { background: var(--red-dk); }
+.copy-latex-status { font-size: 0.8rem; color: var(--fg3); }
+.latex-source {
+  font-family: var(--mono); font-size: 0.78rem; color: var(--fg2);
+  background: var(--bg2); border: 1px solid var(--line-lt);
+  border-radius: 8px; padding: 0.9rem 1rem;
+  overflow-x: auto; white-space: pre; line-height: 1.5;
+}
+
 /* ===== 404 ===== */
 .four-oh-four-links ul { margin-top: 0.3em; }
 .four-oh-four-links a { font-weight: 500; }
