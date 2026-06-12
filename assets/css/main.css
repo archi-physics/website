@@ -430,6 +430,18 @@ h2.section-heading:not(:first-of-type) { margin-top: 2.5rem; }
 }
 .member-role::before { content: none; }
 
+/* --- Funding --- */
+.funding-list {
+  list-style: none; padding: 0; margin: 0;
+  font-size: 0.9rem; color: var(--fg2);
+}
+.funding-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--line-lt);
+}
+.funding-list li:last-child { border-bottom: none; }
+.funding-id { font-family: var(--mono); font-size: 0.85em; color: var(--fg3); }
+
 /* ===== Footer ===== */
 .site-footer {
   border-top: 1px solid var(--line);
