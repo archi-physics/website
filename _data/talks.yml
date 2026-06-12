@@ -4,6 +4,7 @@
   date: 2026-05-26
   event: "CHEP 2026"
   event_url: "https://indico.cern.ch/event/1471803/contributions/6967119/"
+  slides_url: "https://indico.cern.ch/event/1471803/contributions/6967119/attachments/3281397/5881697/archi_CHEP_2026.pdf"
 
 - title: "Agents for Scientific Computing"
   speaker: "Jason Mohoney"
