@@ -6,6 +6,23 @@ permalink: /talks/
 
 <h1 class="page-title">Talks & Publications</h1>
 
+<h2 class="section-heading">Publications</h2>
+
+<ul class="pub-list">
+  {% for pub in site.data.publications %}
+  <li>
+    <div class="pub-title">{% if pub.upcoming %}<span class="talk-upcoming">Upcoming</span> {% endif %}{{ pub.title }}</div>
+    <div class="pub-authors">{{ pub.authors }}</div>
+    <div class="pub-venue">{{ pub.venue }}{% if pub.year %}, {{ pub.year }}{% endif %}</div>
+    <div class="talk-links">
+      {% if pub.arxiv_url %}<a href="{{ pub.arxiv_url }}" target="_blank" rel="noopener">arXiv</a>{% endif %}
+      {% if pub.doi_url %}<a href="{{ pub.doi_url }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+      {% if pub.event_url %}<a href="{{ pub.event_url }}" target="_blank" rel="noopener">Event Page</a>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+
 <h2 class="section-heading">Talks</h2>
 
 <ul class="talks-list">
@@ -24,19 +41,50 @@ permalink: /talks/
   {% endfor %}
 </ul>
 
-<h2 class="section-heading">Publications</h2>
+<h2 class="section-heading">Current Official Author List</h2>
 
-<ul class="pub-list">
-  {% for pub in site.data.publications %}
-  <li>
-    <div class="pub-title">{% if pub.upcoming %}<span class="talk-upcoming">Upcoming</span> {% endif %}{{ pub.title }}</div>
-    <div class="pub-authors">{{ pub.authors }}</div>
-    <div class="pub-venue">{{ pub.venue }}{% if pub.year %}, {{ pub.year }}{% endif %}</div>
-    <div class="talk-links">
-      {% if pub.arxiv_url %}<a href="{{ pub.arxiv_url }}" target="_blank" rel="noopener">arXiv</a>{% endif %}
-      {% if pub.doi_url %}<a href="{{ pub.doi_url }}" target="_blank" rel="noopener">DOI</a>{% endif %}
-      {% if pub.event_url %}<a href="{{ pub.event_url }}" target="_blank" rel="noopener">Event Page</a>{% endif %}
-    </div>
-  </li>
-  {% endfor %}
-</ul>
+<div class="author-block">
+  <p class="author-names">
+    {% for author in site.data.authors.list %}{{ author.name }}<sup>{{ author.affil }}</sup>{% unless forloop.last %}, {% endunless %}{% endfor %}
+  </p>
+  <ol class="author-affils">
+    {% for affil in site.data.authors.affiliations %}
+    <li value="{{ affil.id }}">{{ affil.name }}</li>
+    {% endfor %}
+  </ol>
+  <div class="author-export">
+    <button type="button" class="copy-latex-btn" data-target="latex-authors">Copy LaTeX</button>
+    <span class="copy-latex-status" aria-live="polite"></span>
+  </div>
+  <pre id="latex-authors" class="latex-source"><code>\author{
+{% for author in site.data.authors.list %}  {{ author.name }}\textsuperscript{ {{- author.affil -}} }{% unless forloop.last %},{% endunless %}
+{% endfor %}}
+{% for affil in site.data.authors.affiliations %}\affil[{{ affil.id }}]{ {{- affil.name -}} }
+{% endfor %}</code></pre>
+</div>
+
+<script>
+  (function () {
+    var btn = document.querySelector('.copy-latex-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var pre = document.getElementById(btn.dataset.target);
+      var status = document.querySelector('.copy-latex-status');
+      var text = pre.innerText;
+      var done = function () { if (status) { status.textContent = 'Copied!'; setTimeout(function () { status.textContent = ''; }, 2000); } };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () { fallback(); });
+      } else {
+        fallback();
+      }
+      function fallback() {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+  })();
+</script>
